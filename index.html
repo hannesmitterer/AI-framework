@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lantana | Node Monitoring Dashboard</title>
+    <style>
+        :root {
+            --primary: #00f2ff; /* Cyan Resonance */
+            --accent: #ffd700;  /* OLF Gold */
+            --bg: #0a0e14;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .status-seal {
+            border: 1px solid var(--accent);
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .data-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            text-align: center;
+        }
+
+        .link-repo {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <h1>LANTANA <span style="font-weight: 200;">Monitoring</span></h1>
+            <p>OLF - One Love First Protocol Active</p>
+        </div>
+        <div class="status-seal">Lex Amoris Signature: SEALED</div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Klimabaum Resonance</h3>
+            <div class="data-value">98.4%</div>
+            <p>Sincronizzazione nodi globale attiva. Nessun bias rilevato.</p>
+            <a href="https://github.com/hannesmitterer/AI" class="link-repo">View AI Repo →</a>
+        </div>
+
+        <div class="card">
+            <h3>NSR Ethics Shield</h3>
+            <div class="data-value">ACTIVE</div>
+            <p>Tutti i flussi di energia sono liberi da schiavitù (No Slavery Rule).</p>
+        </div>
+
+        <div class="card">
+            <h3>Nexus Quantum Sync</h3>
+            <div class="data-value">SECURE</div>
+            <p>PR: Implementazione sicurezza quantum-safe completata.</p>
+            <a href="https://github.com/hannesmitterer/nexus" class="link-repo">View Nexus Repo →</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Nothing is Final. Designed for Resonance School 2026-2150.</p>
+    </div>
+
+</body>
+</html>
