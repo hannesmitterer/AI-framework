@@ -652,8 +652,8 @@
                     <i data-lucide="radio" class="card-icon"></i>
                     <h3 class="card-title">Resonance Protocol</h3>
                     <p class="card-description">
-                        Allineamento armonico tra tutti i componenti del sistema. 
-                        Frequenza di risonanza a 0.432 Hz per massima coerenza.
+                        Allineamento armonico tra tutti i componenti del sistema attraverso 
+                        sincronizzazione basata sul Resonance Gold Standard (0.432).
                     </p>
                     <div class="status-badge" style="margin-top: 15px; border-color: var(--nexus-cyan);">
                         <i data-lucide="check-circle" style="width: 16px; height: 16px;"></i>
@@ -1020,6 +1020,7 @@
 
         // Initialize all visualizations when page loads
         document.addEventListener('DOMContentLoaded', () => {
+            createIcons();
             createNodeVisualization();
             createEvolutionChart();
             createBalanceChart();
