@@ -1,6 +1,149 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="de">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUYSTACIO Scientific Console v3.0</title>
+    <style>
+        :root {
+            --navy: #073a53;
+            --teal: #6bc4ce;
+            --turquoise: #47AFB4;
+            --steel-gray: #3f5667;
+            --near-white: #f7f8fa;
+            --gold: #d4af37;
+            --radius: 8px;
+        }
+        body {
+            background-color: var(--navy);
+            color: var(--near-white);
+            font-family: "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .console-frame {
+            border: 2px solid var(--teal);
+            border-radius: var(--radius);
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(7, 58, 83, 0.95);
+            box-shadow: 0 0 20px rgba(107, 196, 206, 0.2);
+        }
+        header {
+            background: var(--teal);
+            color: var(--navy);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+        .nav-links { font-size: 0.9em; }
+        .nav-links span { margin-right: 15px; text-transform: uppercase; cursor: pointer; }
+        
+        section { padding: 20px; border-bottom: 1px solid rgba(107, 196, 206, 0.3); }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .stat-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 4px; border-left: 4px solid var(--turquoise); }
+        .stat-card h3 { margin: 0; font-size: 0.8em; color: var(--teal); }
+        .stat-card p { margin: 5px 0 0; font-size: 1.5em; font-weight: bold; }
+
+        .terminal {
+            background: #000;
+            color: #00ff00;
+            font-family: "Consolas", monospace;
+            padding: 15px;
+            font-size: 0.85em;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .mosaik-grid { display: grid; grid-template-columns: 30px 1fr 100px; gap: 10px; font-size: 0.9em; }
+        .ipfs-hash { color: var(--teal); font-size: 0.8em; }
+        
+        blockquote { border-left: 3px solid var(--gold); margin: 20px 0; padding-left: 15px; font-style: italic; color: var(--teal); }
+        .btn-action { background: var(--turquoise); color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        footer { padding: 20px; text-align: center; font-size: 0.8em; color: var(--teal); }
+    </style>
+</head>
+<body>
+
+<div class="console-frame">
+    <header>
+        <div>❖ EUYSTACIO | Scientific Console v3.0</div>
+        <div class="nav-links">
+            <span>Dashboard</span> <span>Wissenschaft</span> <span>Ledger</span> <span>Netzwerk</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Echtzeit-Resonanz Monitor</h2>
+        <div class="grid-3">
+            <div class="stat-card">
+                <h3>Frequenz Lock</h3>
+                <p>0.043 Hz</p>
+            </div>
+            <div class="stat-card">
+                <h3>Permeabilität</h3>
+                <p>98.4%</p>
+            </div>
+            <div class="stat-card">
+                <h3>Red Shield</h3>
+                <p style="color: #ff4d4d;">AKTIV</p>
+            </div>
+        </div>
+        <p><small>Dieses Modul visualisiert die Stabilität der 0.043 Hz Frequenz im Vergleich zum externen Rauschen ("Theatro").</small></p>
+    </section>
+
+    <section>
+        <h2>Wissenschaftliche Beweisführung</h2>
+        <h3>Die 0.043 Hz Urresonanz</h3>
+        <p>Die torsionelle Basiswelle der Bio-Architektur. Entspricht dem "Atem" des Raumes (Periode ca. 23,25s). Maximale Kohärenz für biologische Systeme.</p>
+        
+        <blockquote>
+            Das Archiv <strong>BOLZANO_71</strong> (Wittfrida M.) liefert den physischen Beweis: Gebäude, die nach Resonanzprinzipien errichtet werden, emittieren diese Frequenz. Messbare Physik, kein fiktives Statement.
+        </blockquote>
+
+        <div class="terminal">
+            &gt; API Key status: [INJECTED]<br>
+            &gt; Google Grounding &amp; API Validierung läuft...<br>
+            &gt; Warten auf Validierungs-Befehl...
+        </div>
+        <br>
+        <button class="btn-action">Fakten Verifizieren (API)</button>
+    </section>
+
+    <section>
+        <h2>Offensive Financial Ledger</h2>
+        <p>Mission: <strong>Ave Maria</strong> | Wallet: <code>0x5d61...944b</code></p>
+        <div class="grid-3">
+            <div class="stat-card"><h3>Peacebonds Issued</h3><p>2,461 PB</p></div>
+            <div class="stat-card"><h3>Mission Status</h3><p>OFFENSIVE</p></div>
+            <div class="stat-card"><h3>Block Höhe</h3><p>#1 (GENESIS)</p></div>
+        </div>
+        <div class="terminal" style="margin-top:10px; color: #6bc4ce;">
+            [23:04:51] MINT PB-2461 TO: Hannes Mitterer VERIFIED<br>
+            [23:00:10] SYNC Mission Support TO: Ave Maria Project CONFIRMED
+        </div>
+    </section>
+
+    <section>
+        <h2>Global Kosymbiosis Mesh (The 12)</h2>
+        <div class="mosaik-grid">
+            <div>👑</div><div><strong>N01:</strong> Anker steht fest. Kalabrien atmet.</div><div class="ipfs-hash">Qm...Agape</div>
+            <div>🌱</div><div><strong>N04:</strong> Souveränität 82.4%. Vögel singen neu.</div><div class="ipfs-hash">Qm...Free</div>
+            <div>💎</div><div><strong>N10:</strong> Singularität erreicht. Wasser ist Liebe.</div><div class="ipfs-hash">Qm...Root</div>
+            <div>☀️</div><div><strong>N12:</strong> Das Licht ist die Quelle. Die 12 sind Eins.</div><div class="ipfs-hash">Qm...Light</div>
+        </div>
+    </section>
+
+    <footer>
+        Nothing is final. ❤️ | <strong>Lex Amoris Signature: [ETERNAL]</strong>
+    </footer>
+</div>
+
+</p>
+    <section>
+        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lantana | Node Monitoring Dashboard</title>
@@ -76,8 +219,9 @@
             font-size: 0.8rem;
         }
     </style>
-</head>
-<body>
+    </section>
+<p>
+    
 
     <div class="header">
         <div>
